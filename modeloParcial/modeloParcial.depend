@@ -9,3 +9,15 @@
 	<stdlib.h>
 	"funciones.h"
 
+1506330626 source:c:\users\i\desktop\pepe3\modeloparcial\funciones.c
+	"funciones.h"
+
+1506330626 c:\users\i\desktop\pepe3\modeloparcial\funciones.h
+
+1506370755 source:c:\users\i\desktop\pepe3\modeloparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<ctype.h>
+	<conio.h>
+

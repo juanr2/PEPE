@@ -1,52 +1,63 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "funciones.h"
+#include <ctype.h>
+#include<conio.h>
 #define CANT 1000
 
-typedef struct{
-
-int codigoProducto;
-int codigoProveedor;
-char descripcionProducto[50];
-float importe;
-int cantidad;
-
-}eProducto;
-
-typedef struct{
-
-int codigoProveedor;
-char descripcionProducto[50];
-
-}eProveedor;
 
 
-int menu(cadena[]);
+int funcionPosLibre(eProducto prod[],int cant);
+
+eProducto prod[CANT];
 
 int main()
 {
-    char opcion,rta='n';
+    char op,rta='n';
 
-
-
-    do{
-
-
-    switch(opcion)
+    do
+    {
+        op=funcionMenu("1-ALTA\n2-MODIFICAR\n3-BAJA\n4-INFORMAR\n5-LISTAR\n6-SALIR\n");
 
 
 
 
-    printf("desea salir s/n: ");
-    fflush(stdin);
-    rta=getch();
+
+        switch(op)
+        {
+
+        case '1':
+
+            printf("alta\n");
+
+            system("pause");
+             system("cls");
+            break;
+        case 2:
+            break;
+
+        case 3:
+            break;
+        case 4:
+            break;
+
+        case 5:
+            break;
+        case 6:
+             printf("desea salir s/n: ");
+        fflush(stdin);
+        rta=getch();
+            break;
+
+            system("pause");
+
+        }
+
+
+
+
+
     }while(rta!='s');
-    printf("Hello world!\n");
+
     return 0;
-}
-int menu(cadena[]){
-
-
-
-
 }
