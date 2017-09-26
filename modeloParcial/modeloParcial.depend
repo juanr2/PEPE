@@ -38,3 +38,21 @@
 	<conio.h>
 	<string.h>
 
+1506456198 source:c:\users\i\desktop\parcialito\modeloparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<ctype.h>
+	<conio.h>
+	<string.h>
+
+1506456269 c:\users\i\desktop\parcialito\modeloparcial\funciones.h
+
+1506456053 source:c:\users\i\desktop\parcialito\modeloparcial\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<ctype.h>
+	<conio.h>
+	<string.h>
+

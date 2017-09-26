@@ -4,6 +4,7 @@
 #include "funciones.h"
 #include <ctype.h>
 #include<conio.h>
+#include<string.h>
 
 
 char funcionMenu(char cadena[])
@@ -71,4 +72,56 @@ return -1;
 
 
 }
+
+int funcionValidar(char num[]){
+
+int cont=0,i,flag=0;
+
+ cont=strlen(num);
+
+    for(i=0;i<cont;i++){
+
+
+        if(!isdigit(num[i])){
+            flag=1;
+            break;
+
+             }
+
+    }
+
+if(flag==1){
+
+    printf("ERROR!!!!NO ES UN NUMERO\n");
+    return 0;
+
+}
+else{
+
+    return 1;
+}
+
+}
+
+
+int funcionValidarNumeros(char validar[])
+{
+
+    int i;
+
+    while(validar[i]!='\0')
+    {
+
+        if((validar[i]<'0'||validar[i]>'9')&&validar[i]!='.')
+
+            return 0;
+
+
+
+        i++;
+
+    }
+    return 1;
+}
+
 

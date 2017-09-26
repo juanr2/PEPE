@@ -22,34 +22,25 @@ eProductoProveedor productoProveedores[CARDINALIDAD];
 int main()
 {
     char op,rta='n';
-    int i,posLibre,posLibrePP,auxCodigo;
+    int i,posLibre,posLibrePP,auxCod;
+
+    char auxCodigo[30],auxImporte[30],auxCantidad[30];
+
+      int auxiliarCodigo,indiceProducto,flag=0;
+
+
+
+
+
 
     for(i=0;i<CANT;i++){
 
             prod[i].estado=0;
         }
 
-//    for(i=0;i<CANTPROV;i++){
-//
-//
-//        prod[i].codigoProducto=i+1;
-//        strcpy(prod[i].descripcionProducto,"el producto es...");
-//
-//
-//    }
-
-
-
-
-
-
     do
     {
         op=funcionMenu("1-ALTA\n2-MODIFICAR\n3-BAJA\n4-INFORMAR\n5-LISTAR\n6-SALIR\n");
-
-
-
-
 
 
         switch(op)
@@ -65,31 +56,53 @@ int main()
 
                 printf("\n\n");
 
-//                 for(i=0;i<CANTPROV;i++){
-//
-//
-//        printf("%d",prod[i].codigoProducto);
-//        printf("%s\n",prod[i].descripcionProducto);
-//
-//
-//    }
+                printf("INGRESE EL CODIGO DEL PRODUCTO: ");
+                fflush(stdin);
+                scanf("%s",auxCodigo);
 
+                while(!funcionValidar(auxCodigo)){
 
-                printf("\nINGRESE EL CODIGO DEL PRODUCTO:");
+                printf("INGRESE EL CODIGO DEL PRODUCTO: ");
+                fflush(stdin);
+                scanf("%s",auxCodigo);
 
-                scanf("%d",&auxCodigo);
+                }
 
-            prod[posLibre].codigoProducto=auxCodigo;
+            prod[posLibre].codigoProducto=atoi(auxCodigo);
 
                 printf("DESCRIBA EL PRODUCTO: ");
                 fflush(stdin);
                 scanf("%s",prod[posLibre].descripcionProducto);
 
                 printf("INGRESE EL IMPORTE: ");
-                scanf("%f",&prod[posLibre].importe);
+                fflush(stdin);
+                scanf("%s",auxImporte);
+
+                while(funcionValidarNumeros(auxImporte)==0){
+
+
+                printf("INGRESE EL IMPORTE: ");
+                fflush(stdin);
+                scanf("%s",auxImporte);
+
+                }
+
+                prod[posLibre].importe=atof(auxImporte);
 
                 printf("INGRESE LA CANTIDAD: ");
-                scanf("%d",&prod[posLibre].cantidad);
+                fflush(stdin);
+                scanf("%s",auxCantidad);
+
+                while(!funcionValidar(auxCantidad)){
+
+                printf("INGRESE LA CANTIDAD: ");
+                fflush(stdin);
+                scanf("%s",auxCantidad);
+
+                }
+
+
+                prod[posLibre].cantidad=atoi(auxCantidad);
 
                 prod[posLibre].estado=1;
 
@@ -106,9 +119,9 @@ int main()
 
                 printf("\nINGRESE EL CODIGO DEL PROVEEDOR:");
 
-                scanf("%d",&auxCodigo);
+                scanf("%d",&auxCod);
 
-                productoProveedores[posLibrePP].codigoProveedor=auxCodigo;
+                productoProveedores[posLibrePP].codigoProveedor=auxCod;
                 productoProveedores[posLibrePP].codigoProducto=prod[posLibre].codigoProducto;
 
 //                for(i=0;i<3;i++){
@@ -120,7 +133,103 @@ int main()
             system("pause");
              system("cls");
             break;
-        case 2:
+        case '2':
+
+
+            printf("\nINGRESE EL CODIGO DEL PRODUCTO A BUSCAR:");
+            scanf("%d",&auxiliarCodigo);
+
+            for(i=0;i<CANT;i++){
+
+                if(auxiliarCodigo==prod[i].codigoProducto){
+
+
+                printf("\nPRODUCTO ENCONTRADO!!!!!");
+                indiceProducto=i;
+
+                flag=1;
+                }else{
+
+                printf("PRODUCTO NO ENCONTRADO!!!\n");
+                break;
+
+
+                }
+
+                if(flag==1){
+
+
+
+
+                 printf("\nDESCRIBA NUEVAMENTE EL PRODUCTO: ");
+                fflush(stdin);
+                scanf("%s",prod[indiceProducto].descripcionProducto);
+
+                printf("\nINGRESE EL NUEVO IMPORTE:");
+                fflush(stdin);
+                scanf("%s",auxImporte);
+
+                while(funcionValidarNumeros(auxImporte)==0){
+
+
+                printf("\nINGRESE EL IMPORTE: ");
+                fflush(stdin);
+                scanf("%s",auxImporte);
+
+                }
+
+                prod[indiceProducto].importe=atof(auxImporte);
+
+                printf("\nINGRESE LA NUEVA CANTIDAD: ");
+                fflush(stdin);
+                scanf("%s",auxCantidad);
+
+                while(!funcionValidar(auxCantidad)){
+
+                printf("\nINGRESE LA CANTIDAD: ");
+                fflush(stdin);
+                scanf("%s",auxCantidad);
+
+                }
+
+
+                prod[indiceProducto].cantidad=atoi(auxCantidad);
+
+
+                for(i=0;i<CARDINALIDAD;i++){
+
+                    if(auxiliarCodigo==productoProveedores[i].codigoProducto){
+
+                     printf("CODIGO\tNOMBRE\n");
+            for(i=0;i<CANTPROV;i++){
+
+
+                printf("%d\t",proveedores[i].codigoProveedor);
+                printf("%s\n",proveedores[i].nombre);
+            }
+
+
+
+                printf("\nINGRESE EL CODIGO DEL PROVEEDOR:");
+
+                scanf("%d",&auxCod);
+
+                productoProveedores[i].codigoProveedor=auxCod;
+
+
+                    }
+                }
+
+
+                }
+
+
+
+
+            }
+
+
+
             break;
 
         case 3:

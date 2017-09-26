@@ -35,3 +35,9 @@ char funcionMenu(char cadena[6]);
 int funcionPosLibre(eProducto prod[],int cant);
 
 int funcionPosLibrePP(eProductoProveedor productoProveedores[],int cant);
+
+
+int funcionValidar(char cadena[]);
+
+
+int funcionValidarNumeros(char validar[]);
