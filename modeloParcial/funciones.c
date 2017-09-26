@@ -31,3 +31,44 @@ char funcionMenu(char cadena[])
 
 
 }
+
+int funcionPosLibre(eProducto prod[],int cant){
+
+int i;
+
+for(i=0;i<cant;i++){
+
+if(prod[i].estado==0){
+
+
+
+    return i;
+}
+}
+return -1;
+
+
+
+
+}
+
+int funcionPosLibrePP(eProductoProveedor productoProveedores[],int cant){
+
+int i;
+
+for(i=0;i<cant;i++){
+
+if(productoProveedores[i].estado==0){
+
+
+
+    return i;
+}
+}
+return -1;
+
+
+
+
+}
+

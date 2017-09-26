@@ -3,17 +3,45 @@
 #include "funciones.h"
 #include <ctype.h>
 #include<conio.h>
-#define CANT 1000
+#include<string.h>
+#define CANT 10
+#define CANTPROV 5
+#define CARDINALIDAD 50
 
 
 
-int funcionPosLibre(eProducto prod[],int cant);
+
 
 eProducto prod[CANT];
+eProveedor proveedores []={{1,"PEPE"},{2,"JUAN"},{3,"CARLOS"},{4,"ALBERTO"},{5,"ROBERTO"}};
+eProductoProveedor productoProveedores[CARDINALIDAD];
+
+
+
 
 int main()
 {
     char op,rta='n';
+    int i,posLibre,posLibrePP,auxCodigo;
+
+    for(i=0;i<CANT;i++){
+
+            prod[i].estado=0;
+        }
+
+//    for(i=0;i<CANTPROV;i++){
+//
+//
+//        prod[i].codigoProducto=i+1;
+//        strcpy(prod[i].descripcionProducto,"el producto es...");
+//
+//
+//    }
+
+
+
+
+
 
     do
     {
@@ -23,12 +51,71 @@ int main()
 
 
 
+
         switch(op)
         {
 
         case '1':
+            posLibre=funcionPosLibre(prod,CANT);
 
-            printf("alta\n");
+                if(posLibre==-1){
+
+                    printf("NO HAY MAS ESPACIO DISPONIBLE");
+                }
+
+                printf("\n\n");
+
+//                 for(i=0;i<CANTPROV;i++){
+//
+//
+//        printf("%d",prod[i].codigoProducto);
+//        printf("%s\n",prod[i].descripcionProducto);
+//
+//
+//    }
+
+
+                printf("\nINGRESE EL CODIGO DEL PRODUCTO:");
+
+                scanf("%d",&auxCodigo);
+
+            prod[posLibre].codigoProducto=auxCodigo;
+
+                printf("DESCRIBA EL PRODUCTO: ");
+                fflush(stdin);
+                scanf("%s",prod[posLibre].descripcionProducto);
+
+                printf("INGRESE EL IMPORTE: ");
+                scanf("%f",&prod[posLibre].importe);
+
+                printf("INGRESE LA CANTIDAD: ");
+                scanf("%d",&prod[posLibre].cantidad);
+
+                prod[posLibre].estado=1;
+
+
+            printf("CODIGO\tNOMBRE\n");
+            for(i=0;i<CANTPROV;i++){
+
+
+                printf("%d\t",proveedores[i].codigoProveedor);
+                printf("%s\n",proveedores[i].nombre);
+            }
+
+                posLibrePP=funcionPosLibrePP(productoProveedores,CARDINALIDAD);
+
+                printf("\nINGRESE EL CODIGO DEL PROVEEDOR:");
+
+                scanf("%d",&auxCodigo);
+
+                productoProveedores[posLibrePP].codigoProveedor=auxCodigo;
+                productoProveedores[posLibrePP].codigoProducto=prod[posLibre].codigoProducto;
+
+//                for(i=0;i<3;i++){
+//
+//                    printf("%d\t",productoProveedores[i].codigoProducto);
+//                    printf("%d\n",productoProveedores[i].codigoProveedor);
+//                }
 
             system("pause");
              system("cls");
@@ -61,3 +148,4 @@ int main()
 
     return 0;
 }
+

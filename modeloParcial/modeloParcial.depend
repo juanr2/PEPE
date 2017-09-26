@@ -21,3 +21,20 @@
 	<ctype.h>
 	<conio.h>
 
+1506386237 source:c:\users\alumno\desktop\pepe\modeloparcial\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<ctype.h>
+	<conio.h>
+
+1506386237 c:\users\alumno\desktop\pepe\modeloparcial\funciones.h
+
+1506386301 source:c:\users\alumno\desktop\pepe\modeloparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<ctype.h>
+	<conio.h>
+	<string.h>
+
