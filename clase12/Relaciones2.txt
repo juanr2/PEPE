@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct{
+    int id;
+    char descripcion[20];
+}eProvincia;
+
+
+typedef struct{
+    char nombre[30];
+    int idProvincia;
+}ePersona;
+
+int main(){
+    eProvincia provincias[]={{1,"BS AS"},{2, "Entre Rios"},{3, "La Pampa"}};
+    ePersona Personas[]={{"Laura", 2},{"Juan", 1},{"Pedro", 3},{"Ana", 1},{"Alberto", 2}};
+    int i, j;
+
+    for(i=0; i<5; i++){
+        for(j=0; j<3; j++){
+            if(Personas[i].idProvincia == provincias[j].id){
+                printf("%s -- %s\n", Personas[i].nombre, provincias[j].descripcion);
+                break;
+            }
+        }
+    }
+    return 0;
+}

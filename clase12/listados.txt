@@ -1,0 +1,8 @@
+Listar:
+todos los productos
+todos los proveedores
+*-*-*-*-*-*-*-*-*-*-*
+todos los productos con sus proveedores
+todos los proveedores con sus productos
+el/los producto/s con mas proveedores
+el/los proveedor/es con mas productos
