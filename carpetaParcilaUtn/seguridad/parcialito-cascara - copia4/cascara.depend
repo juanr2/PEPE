@@ -1,0 +1,26 @@
+# depslib dependency file v1.0
+1506647172 source:c:\users\i\desktop\cascara\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+
+1506969516 source:c:\users\i\desktop\carpetaparcilautn\parcialito-cascara - copia\planilla.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+	"planilla.h"
+
+1506968959 source:c:\users\i\desktop\carpetaparcilautn\parcialito-cascara - copia\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	<ctype.h>
+	"planilla.h"
+
+1506969238 c:\users\i\desktop\carpetaparcilautn\parcialito-cascara - copia\planilla.h
+

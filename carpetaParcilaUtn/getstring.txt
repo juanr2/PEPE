@@ -1,0 +1,96 @@
+ 
+void getString(char message[],char errorMensaje[],char eMessage[],char input[], int lowLimit, int hiLimit);
+
+
+------------------------------------------------------------------------------------------------
+
+
+
+
+    char input[50];
+
+
+
+
+  getString("INGRESE EL NOMBRE DEL PRODUCTO: ","SOLO SE ACEPTAN LETRAS","EXCEDIO LOS 50 CARACTERES",input, 1, 50);
+
+
+
+
+----------------------------------------------------------------------------------------
+
+
+void getString(char message[],char errorMensaje[],char eMessage[],char input[], int lowLimit, int hiLimit){
+   char auxString[256];
+    int auxInt;
+
+
+    while(1){
+
+
+   if(!functionValidString(message,auxString)){
+
+
+     printf("%s",errorMensaje);
+     printf("\n");
+     system("pause");
+     system("cls");
+   continue;
+
+
+   }
+
+
+
+
+   auxInt=strlen(auxString);
+
+   if(auxInt < lowLimit || auxInt > hiLimit){
+
+     printf("%s",eMessage);
+     printf("\n");
+     system("pause");
+     system("cls");
+
+
+      continue;
+
+
+
+   }
+
+
+
+       strcpy(input,auxString);
+
+        break;
+     }
+
+
+
+}
+int functionValidString(char mensaje[],char str[]){
+
+
+int i=0;
+
+
+    printf("\n%s",mensaje);
+    fflush(stdin);
+    scanf("%s",str);
+
+while(str[i]!='\0'){
+
+    if((str[i]<'a'||str[i]>'z')&&(str[i]<'A'||str[i]>'Z')&&(str[i]!='\n')&&(str[i]!=' '))
+
+        return 0;
+
+
+
+    i++;
+
+}
+return 1;
+}
+
+

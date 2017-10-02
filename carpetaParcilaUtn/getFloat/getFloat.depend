@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1506651173 source:c:\users\i\desktop\getfloat\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<string.h>
+	<conio.h>
+
+1506651053 c:\users\i\desktop\getfloat\funciones.h
+
+1506651443 source:c:\users\i\desktop\getfloat\funciones.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<string.h>
+	<conio.h>
+

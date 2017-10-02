@@ -1,0 +1,16 @@
+# depslib dependency file v1.0
+1506639336 source:c:\users\i\desktop\getint\main.c
+	<stdio.h>
+	<stdlib.h>
+	"funciones.h"
+	<conio.h>
+	<string.h>
+
+1506640938 source:c:\users\i\desktop\getint\funciones.c
+	"funciones.h"
+	<conio.h>
+	<stdlib.h>
+
+1506640014 c:\users\i\desktop\getint\funciones.h
+	<stdio.h>
+

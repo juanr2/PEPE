@@ -1,0 +1,120 @@
+
+
+
+
+float getFloat(char message[],char errorMensaje[],char eMessage[], int lowLimit, int hiLimit);
+int funcionValidarNumeros(char mensaje[],char validar[]);
+
+
+
+-----------------------------------------------------------------------------------------------------------
+
+
+
+
+
+getFloat("Cual es tu edad?","ERROR:SOLO SE ACEPTAN NUMEROS","Rango valido [0 - 100]",1,100);
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------
+
+/**
+* \brief Solicita un número al usuario y lo valida
+* \param input Se carga el numero ingresado
+* \param message Es el mensaje a ser mostrado
+* \param eMessage Es el mensaje a ser mostrado en caso de error
+* \param lowLimit Limite inferior a validar
+* \param hiLimit Limite superior a validar
+* \return devuelve un numero entero validado
+*
+*/
+float getFloat(char message[],char errorMensaje[],char eMessage[], int lowLimit, int hiLimit)
+{
+
+    char auxString[256];
+    float auxFloat;
+
+
+    while(1){
+
+
+
+
+   if(!funcionValidarNumeros(message,auxString)){
+
+
+     printf("%s",errorMensaje);
+	 printf("\n");
+     system("pause");
+     system("cls");
+   continue;
+
+
+   }
+
+
+
+
+   auxFloat=atof(auxString);
+
+   if(auxFloat < lowLimit || auxFloat > hiLimit){
+
+     printf("%s",eMessage);
+	 printf("\n");
+     system("pause");
+     system("cls");
+
+
+      continue;
+
+
+
+   }
+
+
+
+        return auxFloat;
+
+
+     }
+
+
+}
+
+
+
+int funcionValidarNumeros(char mensaje[],char validar[])
+{
+
+    int i=0,contadorPuntos=0;
+
+    printf("\n%s",mensaje);
+    fflush(stdin);
+    scanf("%s",validar);
+
+    while(validar[i]!='\0')
+    {
+
+        if((validar[i]<'0'||validar[i]>'9')&&(validar[i]!='.'))
+
+            return 0;
+
+
+            if(validar[i]=='.')
+
+                contadorPuntos++;
+                i++;
+
+    }
+    if(contadorPuntos<2){
+       return 1;
+    }
+    return 0;
+
+}
