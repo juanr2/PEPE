@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1508075296 source:c:\users\i\desktop\clase15_davila\arraypuntero.c
+	<stdio.h>
+	<stdlib.h>
+	"arrayPuntero.h"
+
+1508075142 c:\users\i\desktop\clase15_davila\arraypuntero.h
+
