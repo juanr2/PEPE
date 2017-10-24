@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1508806385 source:c:\users\alumno\desktop\clase17_malloc_realloc\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1508806385 source:c:\users\alumno\desktop\memoria_dinamica\clase17_malloc_realloc\main.c
+	<stdio.h>
+	<stdlib.h>
+
